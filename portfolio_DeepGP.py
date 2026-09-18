@@ -16,18 +16,12 @@ warnings.filterwarnings('ignore')
 # 0. CONFIGURATION & PORTFOLIO
 # ==========================================
 PORTFOLIO_INPUT = [
-    ('VCB.VN', 'BNK'),
-    ('BID.VN', 'BNK'),
-    ('CTG.VN', 'BNK'),
-    ('TCB.VN', 'BNK'),
-    ('MBB.VN', 'BNK'),
-    ('VPB.VN', 'BNK'),
-    ('ACB.VN', 'BNK'),
-    ('STB.VN', 'BNK'),
-    ('HDB.VN', 'BNK'),
-    ('VIB.VN', 'BNK'),
-    ('SHB.VN', 'BNK'),
-    ('TPB.VN', 'BNK'),
+    # Format: ('Ticker', 'SectorCodes')
+    ('FPT.VN', 'SMC'),               # Technology / Semiconductors
+    ('HPG.VN', 'STL, REA'),          # Steel / Real Estate Context
+    ('VCB.VN', 'BNK'),               # Banking
+    ('PNJ.VN', 'RTL, BNK'),          # Retail
+    ('GEX.VN', 'REA, STL, ENG, BNK') # Multi-industry
 ]
 
 TYPE = 'Open'

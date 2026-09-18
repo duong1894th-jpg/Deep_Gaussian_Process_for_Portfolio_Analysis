@@ -1,13 +1,13 @@
-# Vietnam Banking Deep Gaussian Process (DeepGP)
+# Deep Gaussian Process (DeepGP) Stock Forecaster
 
-This repository contains a quantitative financial model utilizing **Deep Kernel Learning (DKL)** to forecast the stock price movements of the top 10 Vietnamese banks.
+This repository contains a quantitative financial model utilizing **Deep Kernel Learning (DKL)** to forecast the stock price movements for any equity asset.
 
-By leveraging a PyTorch Neural Network feature extractor followed by an Exact Gaussian Process (`gpytorch`), the model dynamically learns to blend both internal price-action metrics and external macroeconomic context (e.g., USD/VND exchange rates, U.S. Treasury yields) to predict market signals.
+By leveraging a PyTorch Neural Network feature extractor followed by an Exact Gaussian Process (`gpytorch`), the model dynamically learns to blend both internal price-action metrics and external macroeconomic context (e.g., exchange rates, bond yields, commodity futures) to predict market signals.
 
 ## Algorithm Overview
 This project uses **Deep Kernel Learning (DKL)** to combine the representation-learning power of deep neural networks with the reliable uncertainty quantification of Gaussian Processes (GPs).
 
-1. **Context Feature Extractor**: Both internal metrics (price momentum, volatility, volume intensity, etc.) and external macroeconomic signals (bond yields, exchange rates, commodity futures) are fed into a PyTorch Neural Network. The network projects this complex, raw data into a dense, lower-dimensional embedding.
+1. **Context Feature Extractor**: Both internal metrics (price momentum, volatility, volume intensity, etc.) and external macroeconomic signals are fed into a PyTorch Neural Network. The network projects this complex, raw data into a dense, lower-dimensional embedding.
 2. **Exact Gaussian Process**: Instead of computing a standard RBF kernel on the raw data, the GP computes the kernel on the *neural network's embeddings*. This allows the model to naturally capture complex, non-linear dependencies between the macro environment and the stock's price action.
 3. **Joint Training**: The neural network weights and the GP hyperparameters (lengthscales, noise variances) are jointly optimized end-to-end via gradient descent to maximize the Exact Marginal Log Likelihood.
 
@@ -20,8 +20,8 @@ How the model evaluates each stock:
 ## Features
 - **Deep Kernel Learning**: Neural network feature extraction fused with a Gaussian Process.
 - **Automated Context Integration**: Automatically evaluates external macro conditions alongside internal stock behaviors.
-- **Top 10 Banks Configured**: Pre-configured to scan VCB, BID, CTG, TCB, MBB, VPB, ACB, STB, HDB, and VIB.
-- **Sector Mapping Reference**: Includes `vietnam_stock_sectors_external_features.csv` as a master lookup guide to easily run the code for *any* stock based on its sector and relevant macro features.
+- **Cross-Sector Flexibility**: Configurable to scan any stock across any sector by defining custom macro features.
+- **Sector Mapping Reference**: Includes `vietnam_stock_sectors_external_features.csv` as a master lookup guide to easily map relevant macro features to specific stock sectors.
 
 ## Installation
 Ensure you have Python installed, then install the required AI libraries:
