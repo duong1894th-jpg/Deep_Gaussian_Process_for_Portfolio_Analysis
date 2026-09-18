@@ -1,0 +1,11 @@
+sector_code,sector_name,example_companies,external_features,python_data_sources
+BNK,Banking,"Vietcombank, Techcombank","USD/VND, Vietnam interbank rate, US Fed rate, Vietnam bond yields, VNINDEX return","yfinance, fredapi, vnstock, World Bank API"
+STL,Steel,Hoa Phat Group,"Iron ore futures, Coking coal, China steel production, Construction index, Baltic Dry Index","yfinance, Nasdaq Data Link, World Bank API"
+DLY,Dairy,Vinamilk,"Global milk price, Corn futures, Soybean meal, Crude oil, Consumer CPI","yfinance, FRED, World Bank API"
+SFD,Seafood Export,Vinh Hoan,"USD/VND, Shrimp prices, US import data, Freight index, Oil price","yfinance, World Bank API, fredapi"
+SMC,Semiconductor & Electronics,FPT,"NASDAQ, Semiconductor index, Copper futures, Taiwan index, USD index","yfinance, fredapi"
+REA,Real Estate,Vinhomes,"Vietnam interest rates, Cement prices, Steel prices, Credit growth, Bond yields","fredapi, World Bank API, vnstock"
+ENG,Energy & Oil/Gas,Petrovietnam Gas,"Brent crude, Natural gas price, USD index, OPEC-related indicators","yfinance, EIA API, fredapi"
+FTL,Fertilizer & Agriculture,Dam Phu My,"Urea price, Natural gas, Rice price, Corn price, Wheat price","World Bank API, yfinance"
+RTL,Retail & Consumer,Mobile World,"CPI, Consumer confidence, USD/VND, Oil prices, Wage growth","fredapi, World Bank API"
+SHP,Shipping & Ports,Gemadept,"Baltic Dry Index, Container freight index, Oil prices, China export data","yfinance, World Bank API"
